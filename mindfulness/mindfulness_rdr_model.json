@@ -1,0 +1,325 @@
+{
+    "rule": "Default",
+    "conclusion": "breathing",
+    "cornerstone_idx": 8,
+    "exception": {
+        "rule": "mood == exhausted",
+        "conclusion": "relaxation",
+        "cornerstone_idx": 88,
+        "exception": {
+            "rule": "energy == medium",
+            "conclusion": "meditation",
+            "cornerstone_idx": 89,
+            "exception": {
+                "rule": "sleep == poor",
+                "conclusion": "breathing",
+                "cornerstone_idx": 119,
+                "exception": null,
+                "alternative": null
+            },
+            "alternative": null
+        },
+        "alternative": {
+            "rule": "mood == happy",
+            "conclusion": "relaxation",
+            "cornerstone_idx": 113,
+            "exception": {
+                "rule": "sleep == poor",
+                "conclusion": "meditation",
+                "cornerstone_idx": 46,
+                "exception": {
+                    "rule": "energy == low",
+                    "conclusion": "breathing",
+                    "cornerstone_idx": 47,
+                    "exception": null,
+                    "alternative": null
+                },
+                "alternative": {
+                    "rule": "energy == medium",
+                    "conclusion": "meditation",
+                    "cornerstone_idx": 42,
+                    "exception": null,
+                    "alternative": {
+                        "rule": "energy == high",
+                        "conclusion": "meditation",
+                        "cornerstone_idx": 43,
+                        "exception": null,
+                        "alternative": null
+                    }
+                }
+            },
+            "alternative": {
+                "rule": "mood == unmotivated",
+                "conclusion": "relaxation",
+                "cornerstone_idx": 106,
+                "exception": null,
+                "alternative": {
+                    "rule": "mood == lonely",
+                    "conclusion": "relaxation",
+                    "cornerstone_idx": 93,
+                    "exception": {
+                        "rule": "sleep == good",
+                        "conclusion": "meditation",
+                        "cornerstone_idx": 95,
+                        "exception": {
+                            "rule": "energy == low",
+                            "conclusion": "relaxation",
+                            "cornerstone_idx": 94,
+                            "exception": null,
+                            "alternative": null
+                        },
+                        "alternative": null
+                    },
+                    "alternative": {
+                        "rule": "mood == bored",
+                        "conclusion": "meditation",
+                        "cornerstone_idx": 98,
+                        "exception": {
+                            "rule": "sleep == average",
+                            "conclusion": "relaxation",
+                            "cornerstone_idx": 97,
+                            "exception": null,
+                            "alternative": {
+                                "rule": "sleep == poor",
+                                "conclusion": "relaxation",
+                                "cornerstone_idx": 96,
+                                "exception": null,
+                                "alternative": null
+                            }
+                        },
+                        "alternative": {
+                            "rule": "mood == focused",
+                            "conclusion": "meditation",
+                            "cornerstone_idx": 51,
+                            "exception": {
+                                "rule": "sleep == poor",
+                                "conclusion": "relaxation",
+                                "cornerstone_idx": 52,
+                                "exception": {
+                                    "rule": "energy == medium",
+                                    "conclusion": "meditation",
+                                    "cornerstone_idx": 53,
+                                    "exception": null,
+                                    "alternative": null
+                                },
+                                "alternative": {
+                                    "rule": "sleep == good",
+                                    "conclusion": "breathing",
+                                    "cornerstone_idx": 114,
+                                    "exception": null,
+                                    "alternative": null
+                                }
+                            },
+                            "alternative": {
+                                "rule": "mood == angry",
+                                "conclusion": "relaxation",
+                                "cornerstone_idx": 22,
+                                "exception": {
+                                    "rule": "sleep == average",
+                                    "conclusion": "breathing",
+                                    "cornerstone_idx": 21,
+                                    "exception": null,
+                                    "alternative": {
+                                        "rule": "sleep == poor",
+                                        "conclusion": "breathing",
+                                        "cornerstone_idx": 19,
+                                        "exception": null,
+                                        "alternative": null
+                                    }
+                                },
+                                "alternative": {
+                                    "rule": "mood == tired",
+                                    "conclusion": "relaxation",
+                                    "cornerstone_idx": 74,
+                                    "exception": {
+                                        "rule": "energy == medium",
+                                        "conclusion": "breathing",
+                                        "cornerstone_idx": 116,
+                                        "exception": {
+                                            "rule": "sleep == good",
+                                            "conclusion": "meditation",
+                                            "cornerstone_idx": 77,
+                                            "exception": null,
+                                            "alternative": null
+                                        },
+                                        "alternative": null
+                                    },
+                                    "alternative": {
+                                        "rule": "mood == hopeful",
+                                        "conclusion": "meditation",
+                                        "cornerstone_idx": 68,
+                                        "exception": {
+                                            "rule": "sleep == average",
+                                            "conclusion": "breathing",
+                                            "cornerstone_idx": 67,
+                                            "exception": null,
+                                            "alternative": null
+                                        },
+                                        "alternative": {
+                                            "rule": "mood == peaceful",
+                                            "conclusion": "relaxation",
+                                            "cornerstone_idx": 59,
+                                            "exception": {
+                                                "rule": "sleep == good",
+                                                "conclusion": "meditation",
+                                                "cornerstone_idx": 54,
+                                                "exception": null,
+                                                "alternative": {
+                                                    "rule": "sleep == average",
+                                                    "conclusion": "meditation",
+                                                    "cornerstone_idx": 56,
+                                                    "exception": null,
+                                                    "alternative": {
+                                                        "rule": "energy == low",
+                                                        "conclusion": "breathing",
+                                                        "cornerstone_idx": 58,
+                                                        "exception": null,
+                                                        "alternative": null
+                                                    }
+                                                }
+                                            },
+                                            "alternative": {
+                                                "rule": "mood == overthinking",
+                                                "conclusion": "relaxation",
+                                                "cornerstone_idx": 16,
+                                                "exception": {
+                                                    "rule": "sleep == poor",
+                                                    "conclusion": "breathing",
+                                                    "cornerstone_idx": 110,
+                                                    "exception": null,
+                                                    "alternative": {
+                                                        "rule": "energy == medium",
+                                                        "conclusion": "meditation",
+                                                        "cornerstone_idx": 17,
+                                                        "exception": null,
+                                                        "alternative": {
+                                                            "rule": "sleep == average",
+                                                            "conclusion": "breathing",
+                                                            "cornerstone_idx": 14,
+                                                            "exception": null,
+                                                            "alternative": null
+                                                        }
+                                                    }
+                                                },
+                                                "alternative": {
+                                                    "rule": "mood == balanced",
+                                                    "conclusion": "meditation",
+                                                    "cornerstone_idx": 64,
+                                                    "exception": {
+                                                        "rule": "sleep == poor",
+                                                        "conclusion": "relaxation",
+                                                        "cornerstone_idx": 65,
+                                                        "exception": null,
+                                                        "alternative": null
+                                                    },
+                                                    "alternative": {
+                                                        "rule": "sleep == good",
+                                                        "conclusion": "meditation",
+                                                        "cornerstone_idx": 11,
+                                                        "exception": {
+                                                            "rule": "mood == sad",
+                                                            "conclusion": "relaxation",
+                                                            "cornerstone_idx": 82,
+                                                            "exception": {
+                                                                "rule": "energy == medium",
+                                                                "conclusion": "breathing",
+                                                                "cornerstone_idx": 83,
+                                                                "exception": null,
+                                                                "alternative": null
+                                                            },
+                                                            "alternative": {
+                                                                "rule": "mood == drained",
+                                                                "conclusion": "relaxation",
+                                                                "cornerstone_idx": 101,
+                                                                "exception": null,
+                                                                "alternative": {
+                                                                    "rule": "mood == calm",
+                                                                    "conclusion": "relaxation",
+                                                                    "cornerstone_idx": 112,
+                                                                    "exception": {
+                                                                        "rule": "energy == medium",
+                                                                        "conclusion": "meditation",
+                                                                        "cornerstone_idx": 36,
+                                                                        "exception": null,
+                                                                        "alternative": null
+                                                                    },
+                                                                    "alternative": {
+                                                                        "rule": "mood == stressed",
+                                                                        "conclusion": "breathing",
+                                                                        "cornerstone_idx": 4,
+                                                                        "exception": null,
+                                                                        "alternative": null
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "alternative": {
+                                                            "rule": "mood == drained",
+                                                            "conclusion": "relaxation",
+                                                            "cornerstone_idx": 100,
+                                                            "exception": null,
+                                                            "alternative": {
+                                                                "rule": "mood == calm",
+                                                                "conclusion": "relaxation",
+                                                                "cornerstone_idx": 41,
+                                                                "exception": {
+                                                                    "rule": "sleep == average",
+                                                                    "conclusion": "breathing",
+                                                                    "cornerstone_idx": 39,
+                                                                    "exception": {
+                                                                        "rule": "energy == medium",
+                                                                        "conclusion": "meditation",
+                                                                        "cornerstone_idx": 38,
+                                                                        "exception": null,
+                                                                        "alternative": null
+                                                                    },
+                                                                    "alternative": {
+                                                                        "rule": "energy == medium",
+                                                                        "conclusion": "meditation",
+                                                                        "cornerstone_idx": 40,
+                                                                        "exception": null,
+                                                                        "alternative": null
+                                                                    }
+                                                                },
+                                                                "alternative": {
+                                                                    "rule": "mood == sad",
+                                                                    "conclusion": "relaxation",
+                                                                    "cornerstone_idx": 78,
+                                                                    "exception": null,
+                                                                    "alternative": {
+                                                                        "rule": "mood == sleepy",
+                                                                        "conclusion": "relaxation",
+                                                                        "cornerstone_idx": 102,
+                                                                        "exception": null,
+                                                                        "alternative": {
+                                                                            "rule": "mood == content",
+                                                                            "conclusion": "meditation",
+                                                                            "cornerstone_idx": 70,
+                                                                            "exception": {
+                                                                                "rule": "sleep == poor",
+                                                                                "conclusion": "relaxation",
+                                                                                "cornerstone_idx": 71,
+                                                                                "exception": null,
+                                                                                "alternative": null
+                                                                            },
+                                                                            "alternative": null
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "alternative": null
+}

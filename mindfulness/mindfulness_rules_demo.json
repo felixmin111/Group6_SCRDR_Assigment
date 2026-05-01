@@ -1,0 +1,573 @@
+{
+  "condition": null,
+  "conclusion": "Unknown",
+  "if_true": {
+    "condition": {
+      "col": "mood",
+      "op": "==",
+      "val": "stressed"
+    },
+    "conclusion": "breathing",
+    "if_true": {
+      "condition": {
+        "col": "time",
+        "op": ">",
+        "val": "10"
+      },
+      "conclusion": "meditation",
+      "if_true": null,
+      "if_false": null
+    },
+    "if_false": {
+      "condition": {
+        "col": "mood",
+        "op": "==",
+        "val": "anxious"
+      },
+      "conclusion": "breathing",
+      "if_true": {
+        "condition": {
+          "col": "energy",
+          "op": "==",
+          "val": "medium"
+        },
+        "conclusion": "meditation",
+        "if_true": {
+          "condition": {
+            "col": "time",
+            "op": "==",
+            "val": "10"
+          },
+          "conclusion": "breathing",
+          "if_true": null,
+          "if_false": null
+        },
+        "if_false": null
+      },
+      "if_false": {
+        "condition": {
+          "col": "time",
+          "op": "==",
+          "val": "5"
+        },
+        "conclusion": "breathing",
+        "if_true": null,
+        "if_false": {
+          "condition": {
+            "col": "time",
+            "op": "<",
+            "val": "10"
+          },
+          "conclusion": "breathing",
+          "if_true": null,
+          "if_false": {
+            "condition": {
+              "col": "mood",
+              "op": "==",
+              "val": "overthinking"
+            },
+            "conclusion": "breathing",
+            "if_true": {
+              "condition": {
+                "col": "energy",
+                "op": "==",
+                "val": "medium"
+              },
+              "conclusion": "meditation",
+              "if_true": {
+                "condition": {
+                  "col": "time",
+                  "op": "==",
+                  "val": "10"
+                },
+                "conclusion": "breathing",
+                "if_true": {
+                  "condition": {
+                    "col": "energy",
+                    "op": "==",
+                    "val": "medium"
+                  },
+                  "conclusion": "meditation",
+                  "if_true": {
+                    "condition": {
+                      "col": "time",
+                      "op": "==",
+                      "val": "10"
+                    },
+                    "conclusion": "breathing",
+                    "if_true": {
+                      "condition": {
+                        "col": "energy",
+                        "op": "==",
+                        "val": "medium"
+                      },
+                      "conclusion": "meditation",
+                      "if_true": {
+                        "condition": {
+                          "col": "sleep",
+                          "op": "==",
+                          "val": "poor"
+                        },
+                        "conclusion": "breathing",
+                        "if_true": null,
+                        "if_false": null
+                      },
+                      "if_false": null
+                    },
+                    "if_false": null
+                  },
+                  "if_false": null
+                },
+                "if_false": null
+              },
+              "if_false": {
+                "condition": {
+                  "col": "energy",
+                  "op": "==",
+                  "val": "low"
+                },
+                "conclusion": "relaxation",
+                "if_true": {
+                  "condition": {
+                    "col": "mood",
+                    "op": "==",
+                    "val": "overthinking"
+                  },
+                  "conclusion": "breathing",
+                  "if_true": {
+                    "condition": {
+                      "col": "energy",
+                      "op": "==",
+                      "val": "low"
+                    },
+                    "conclusion": "relaxation",
+                    "if_true": {
+                      "condition": {
+                        "col": "mood",
+                        "op": "==",
+                        "val": "overthinking"
+                      },
+                      "conclusion": "breathing",
+                      "if_true": {
+                        "condition": {
+                          "col": "energy",
+                          "op": "==",
+                          "val": "low"
+                        },
+                        "conclusion": "relaxation",
+                        "if_true": {
+                          "condition": {
+                            "col": "energy",
+                            "op": "==",
+                            "val": "low"
+                          },
+                          "conclusion": "breathing",
+                          "if_true": {
+                            "condition": {
+                              "col": "energy",
+                              "op": "==",
+                              "val": "low"
+                            },
+                            "conclusion": "relaxation",
+                            "if_true": {
+                              "condition": {
+                                "col": "mood",
+                                "op": "==",
+                                "val": "overthinking"
+                              },
+                              "conclusion": "breathing",
+                              "if_true": {
+                                "condition": {
+                                  "col": "time",
+                                  "op": ">",
+                                  "val": "10"
+                                },
+                                "conclusion": "relaxation",
+                                "if_true": null,
+                                "if_false": null
+                              },
+                              "if_false": null
+                            },
+                            "if_false": null
+                          },
+                          "if_false": null
+                        },
+                        "if_false": null
+                      },
+                      "if_false": null
+                    },
+                    "if_false": null
+                  },
+                  "if_false": null
+                },
+                "if_false": null
+              }
+            },
+            "if_false": {
+              "condition": {
+                "col": "mood",
+                "op": "==",
+                "val": "angry"
+              },
+              "conclusion": "breathing",
+              "if_true": {
+                "condition": {
+                  "col": "mood",
+                  "op": "==",
+                  "val": "angry"
+                },
+                "conclusion": "relaxation",
+                "if_true": {
+                  "condition": {
+                    "col": "time",
+                    "op": ">",
+                    "val": "10"
+                  },
+                  "conclusion": "meditation",
+                  "if_true": null,
+                  "if_false": {
+                    "condition": {
+                      "col": "mood",
+                      "op": "==",
+                      "val": "angry"
+                    },
+                    "conclusion": "breathing",
+                    "if_true": {
+                      "condition": {
+                        "col": "energy",
+                        "op": "==",
+                        "val": "low"
+                      },
+                      "conclusion": "relaxation",
+                      "if_true": null,
+                      "if_false": null
+                    },
+                    "if_false": null
+                  }
+                },
+                "if_false": null
+              },
+              "if_false": {
+                "condition": {
+                  "col": "mood",
+                  "op": "==",
+                  "val": "nervous"
+                },
+                "conclusion": "breathing",
+                "if_true": {
+                  "condition": {
+                    "col": "time",
+                    "op": ">",
+                    "val": "10"
+                  },
+                  "conclusion": "meditation",
+                  "if_true": null,
+                  "if_false": null
+                },
+                "if_false": {
+                  "condition": {
+                    "col": "mood",
+                    "op": "==",
+                    "val": "worried"
+                  },
+                  "conclusion": "breathing",
+                  "if_true": {
+                    "condition": {
+                      "col": "time",
+                      "op": ">",
+                      "val": "10"
+                    },
+                    "conclusion": "meditation",
+                    "if_true": null,
+                    "if_false": null
+                  },
+                  "if_false": {
+                    "condition": {
+                      "col": "mood",
+                      "op": "==",
+                      "val": "panic"
+                    },
+                    "conclusion": "breathing",
+                    "if_true": null,
+                    "if_false": {
+                      "condition": {
+                        "col": "mood",
+                        "op": "==",
+                        "val": "frustrated"
+                      },
+                      "conclusion": "breathing",
+                      "if_true": {
+                        "condition": {
+                          "col": "energy",
+                          "op": "==",
+                          "val": "medium"
+                        },
+                        "conclusion": "meditation",
+                        "if_true": {
+                          "condition": {
+                            "col": "time",
+                            "op": "==",
+                            "val": "10"
+                          },
+                          "conclusion": "breathing",
+                          "if_true": null,
+                          "if_false": null
+                        },
+                        "if_false": null
+                      },
+                      "if_false": {
+                        "condition": {
+                          "col": "mood",
+                          "op": "==",
+                          "val": "calm"
+                        },
+                        "conclusion": "meditation",
+                        "if_true": {
+                          "condition": {
+                            "col": "energy",
+                            "op": "==",
+                            "val": "low"
+                          },
+                          "conclusion": "relaxation",
+                          "if_true": null,
+                          "if_false": {
+                            "condition": {
+                              "col": "energy",
+                              "op": "==",
+                              "val": "very_low"
+                            },
+                            "conclusion": "relaxation",
+                            "if_true": null,
+                            "if_false": null
+                          }
+                        },
+                        "if_false": {
+                          "condition": {
+                            "col": "mood",
+                            "op": "==",
+                            "val": "happy"
+                          },
+                          "conclusion": "meditation",
+                          "if_true": {
+                            "condition": {
+                              "col": "energy",
+                              "op": "==",
+                              "val": "low"
+                            },
+                            "conclusion": "breathing",
+                            "if_true": null,
+                            "if_false": {
+                              "condition": {
+                                "col": "energy",
+                                "op": "==",
+                                "val": "very_low"
+                              },
+                              "conclusion": "relaxation",
+                              "if_true": null,
+                              "if_false": null
+                            }
+                          },
+                          "if_false": {
+                            "condition": {
+                              "col": "mood",
+                              "op": "==",
+                              "val": "focus"
+                            },
+                            "conclusion": "meditation",
+                            "if_true": null,
+                            "if_false": {
+                              "condition": {
+                                "col": "mood",
+                                "op": "==",
+                                "val": "focused"
+                              },
+                              "conclusion": "meditation",
+                              "if_true": {
+                                "condition": {
+                                  "col": "energy",
+                                  "op": "==",
+                                  "val": "low"
+                                },
+                                "conclusion": "relaxation",
+                                "if_true": null,
+                                "if_false": null
+                              },
+                              "if_false": {
+                                "condition": {
+                                  "col": "mood",
+                                  "op": "==",
+                                  "val": "peaceful"
+                                },
+                                "conclusion": "meditation",
+                                "if_true": {
+                                  "condition": {
+                                    "col": "sleep",
+                                    "op": "==",
+                                    "val": "poor"
+                                  },
+                                  "conclusion": "relaxation",
+                                  "if_true": null,
+                                  "if_false": {
+                                    "condition": {
+                                      "col": "energy",
+                                      "op": "==",
+                                      "val": "very_low"
+                                    },
+                                    "conclusion": "relaxation",
+                                    "if_true": null,
+                                    "if_false": null
+                                  }
+                                },
+                                "if_false": {
+                                  "condition": {
+                                    "col": "mood",
+                                    "op": "==",
+                                    "val": "motivated"
+                                  },
+                                  "conclusion": "meditation",
+                                  "if_true": {
+                                    "condition": {
+                                      "col": "sleep",
+                                      "op": "==",
+                                      "val": "poor"
+                                    },
+                                    "conclusion": "breathing",
+                                    "if_true": null,
+                                    "if_false": null
+                                  },
+                                  "if_false": {
+                                    "condition": {
+                                      "col": "mood",
+                                      "op": "==",
+                                      "val": "balanced"
+                                    },
+                                    "conclusion": "meditation",
+                                    "if_true": {
+                                      "condition": {
+                                        "col": "sleep",
+                                        "op": "==",
+                                        "val": "poor"
+                                      },
+                                      "conclusion": "relaxation",
+                                      "if_true": null,
+                                      "if_false": null
+                                    },
+                                    "if_false": {
+                                      "condition": {
+                                        "col": "mood",
+                                        "op": "==",
+                                        "val": "hopeful"
+                                      },
+                                      "conclusion": "meditation",
+                                      "if_true": {
+                                        "condition": {
+                                          "col": "energy",
+                                          "op": "==",
+                                          "val": "low"
+                                        },
+                                        "conclusion": "breathing",
+                                        "if_true": null,
+                                        "if_false": null
+                                      },
+                                      "if_false": {
+                                        "condition": {
+                                          "col": "mood",
+                                          "op": "==",
+                                          "val": "content"
+                                        },
+                                        "conclusion": "meditation",
+                                        "if_true": {
+                                          "condition": {
+                                            "col": "energy",
+                                            "op": "==",
+                                            "val": "low"
+                                          },
+                                          "conclusion": "relaxation",
+                                          "if_true": null,
+                                          "if_false": null
+                                        },
+                                        "if_false": {
+                                          "condition": {
+                                            "col": "mood",
+                                            "op": "==",
+                                            "val": "tired"
+                                          },
+                                          "conclusion": "relaxation",
+                                          "if_true": {
+                                            "condition": {
+                                              "col": "energy",
+                                              "op": "==",
+                                              "val": "medium"
+                                            },
+                                            "conclusion": "meditation",
+                                            "if_true": null,
+                                            "if_false": null
+                                          },
+                                          "if_false": {
+                                            "condition": {
+                                              "col": "energy",
+                                              "op": "==",
+                                              "val": "low"
+                                            },
+                                            "conclusion": "relaxation",
+                                            "if_true": null,
+                                            "if_false": {
+                                              "condition": {
+                                                "col": "energy",
+                                                "op": "==",
+                                                "val": "very_low"
+                                              },
+                                              "conclusion": "relaxation",
+                                              "if_true": null,
+                                              "if_false": {
+                                                "condition": {
+                                                  "col": "mood",
+                                                  "op": "==",
+                                                  "val": "sad"
+                                                },
+                                                "conclusion": "breathing",
+                                                "if_true": null,
+                                                "if_false": {
+                                                  "condition": {
+                                                    "col": "energy",
+                                                    "op": "==",
+                                                    "val": "medium"
+                                                  },
+                                                  "conclusion": "meditation",
+                                                  "if_true": null,
+                                                  "if_false": {
+                                                    "condition": {
+                                                      "col": "energy",
+                                                      "op": "==",
+                                                      "val": "high"
+                                                    },
+                                                    "conclusion": "meditation",
+                                                    "if_true": null,
+                                                    "if_false": null
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "if_false": null
+}

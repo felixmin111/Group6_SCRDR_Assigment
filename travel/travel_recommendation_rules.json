@@ -1,0 +1,96 @@
+{
+  "condition": null,
+  "conclusion": "Unknown",
+  "if_true": {
+    "condition": {
+      "col": "Vibe",
+      "op": "==",
+      "val": "Adventure"
+    },
+    "conclusion": "Swiss Alps",
+    "if_true": {
+      "condition": {
+        "col": "Vibe",
+        "op": "==",
+        "val": "Adventure"
+      },
+      "conclusion": "Grand Canyon",
+      "if_true": {
+        "condition": {
+          "col": "Budget",
+          "op": "==",
+          "val": "Low"
+        },
+        "conclusion": "Nepal Trek",
+        "if_true": null,
+        "if_false": null
+      },
+      "if_false": null
+    },
+    "if_false": {
+      "condition": {
+        "col": "Vibe",
+        "op": "==",
+        "val": "Relax"
+      },
+      "conclusion": "Local Beach",
+      "if_true": {
+        "condition": {
+          "col": "Budget",
+          "op": "==",
+          "val": "Hight"
+        },
+        "conclusion": "Maldives",
+        "if_true": null,
+        "if_false": {
+          "condition": {
+            "col": "Budget",
+            "op": "==",
+            "val": "Medium"
+          },
+          "conclusion": "Bali",
+          "if_true": null,
+          "if_false": null
+        }
+      },
+      "if_false": {
+        "condition": {
+          "col": "Vibe",
+          "op": "==",
+          "val": "Culture"
+        },
+        "conclusion": "Kyoto",
+        "if_true": {
+          "condition": {
+            "col": "Weather_Pref",
+            "op": "==",
+            "val": "Cold"
+          },
+          "conclusion": "Vatican City",
+          "if_true": null,
+          "if_false": null
+        },
+        "if_false": {
+          "condition": {
+            "col": "Vibe",
+            "op": "==",
+            "val": "Party"
+          },
+          "conclusion": "Ibiza",
+          "if_true": {
+            "condition": {
+              "col": "Budget",
+              "op": "==",
+              "val": "Medium"
+            },
+            "conclusion": "Bangkok",
+            "if_true": null,
+            "if_false": null
+          },
+          "if_false": null
+        }
+      }
+    }
+  },
+  "if_false": null
+}

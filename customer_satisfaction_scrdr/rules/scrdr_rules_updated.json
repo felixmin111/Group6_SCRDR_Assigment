@@ -1,0 +1,258 @@
+{
+  "rule_id": "R0",
+  "conditions": {},
+  "conclusion": "Neutral",
+  "justification": "Default rule: no specific signals detected \u2014 classify as Neutral",
+  "exceptions": [
+    {
+      "rule_id": "R1",
+      "conditions": {
+        "tone": "positive",
+        "issue_resolved": "yes"
+      },
+      "conclusion": "Satisfied",
+      "justification": "Positive tone combined with resolved issue strongly indicates satisfaction",
+      "exceptions": [
+        {
+          "rule_id": "R1.1",
+          "conditions": {
+            "tone": "positive",
+            "issue_resolved": "yes",
+            "response_time": "slow"
+          },
+          "conclusion": "Neutral",
+          "justification": "Despite positive tone and resolution, slow response time undermines satisfaction",
+          "exceptions": [
+            {
+              "rule_id": "R1.1.1",
+              "conditions": {
+                "tone": "positive",
+                "issue_resolved": "yes",
+                "response_time": "slow",
+                "product_quality": "high",
+                "repeat_customer": "yes"
+              },
+              "conclusion": "Satisfied",
+              "justification": "Loyal customer with high-quality product forgives slow response if issue was resolved",
+              "exceptions": []
+            }
+          ]
+        },
+        {
+          "rule_id": "R1.2",
+          "conditions": {
+            "tone": "positive",
+            "issue_resolved": "yes",
+            "product_quality": "low"
+          },
+          "conclusion": "Neutral",
+          "justification": "Low product quality tempers satisfaction despite positive tone and resolution",
+          "exceptions": []
+        }
+      ]
+    },
+    {
+      "rule_id": "R2",
+      "conditions": {
+        "tone": "negative",
+        "issue_resolved": "no"
+      },
+      "conclusion": "Dissatisfied",
+      "justification": "Negative tone with unresolved issue is a clear dissatisfaction signal",
+      "exceptions": [
+        {
+          "rule_id": "R2.1",
+          "conditions": {
+            "tone": "negative",
+            "issue_resolved": "no",
+            "product_quality": "high",
+            "support_experience": "good"
+          },
+          "conclusion": "Neutral",
+          "justification": "High product quality and good support soften dissatisfaction even when issue is unresolved",
+          "exceptions": []
+        },
+        {
+          "rule_id": "R2.2",
+          "conditions": {
+            "response_time": "medium",
+            "product_quality": "medium",
+            "support_experience": "average",
+            "issue_resolved": "no",
+            "tone": "negative",
+            "repeat_customer": "yes"
+          },
+          "conclusion": "Neutral",
+          "justification": "Exception added by incremental learning: correct label is 'Neutral' for record with conditions response_time=medium, product_quality=medium, support_experience=average, issue_resolved=no, tone=negative, repeat_customer=yes",
+          "exceptions": []
+        }
+      ]
+    },
+    {
+      "rule_id": "R3",
+      "conditions": {
+        "response_time": "fast",
+        "product_quality": "high"
+      },
+      "conclusion": "Satisfied",
+      "justification": "Fast response with high product quality reliably produces satisfaction",
+      "exceptions": [
+        {
+          "rule_id": "R3.1",
+          "conditions": {
+            "response_time": "fast",
+            "product_quality": "high",
+            "support_experience": "poor",
+            "issue_resolved": "no"
+          },
+          "conclusion": "Neutral",
+          "justification": "Poor support and unresolved issue cancel out the benefits of fast response and quality product",
+          "exceptions": []
+        }
+      ]
+    },
+    {
+      "rule_id": "R4",
+      "conditions": {
+        "response_time": "slow",
+        "support_experience": "poor"
+      },
+      "conclusion": "Dissatisfied",
+      "justification": "Slow response combined with poor support experience leads to dissatisfaction",
+      "exceptions": [
+        {
+          "rule_id": "R4.1",
+          "conditions": {
+            "response_time": "slow",
+            "support_experience": "poor",
+            "issue_resolved": "yes",
+            "tone": "positive"
+          },
+          "conclusion": "Neutral",
+          "justification": "If issue was ultimately resolved and customer tone remains positive, dissatisfaction is mitigated",
+          "exceptions": []
+        }
+      ]
+    },
+    {
+      "rule_id": "R5",
+      "conditions": {
+        "product_quality": "low",
+        "tone": "negative"
+      },
+      "conclusion": "Dissatisfied",
+      "justification": "Low product quality paired with negative tone confirms dissatisfaction",
+      "exceptions": [
+        {
+          "rule_id": "R5.1",
+          "conditions": {
+            "response_time": "fast",
+            "product_quality": "low",
+            "support_experience": "average",
+            "issue_resolved": "yes",
+            "tone": "negative",
+            "repeat_customer": "no"
+          },
+          "conclusion": "Neutral",
+          "justification": "Exception added by incremental learning: correct label is 'Neutral' for record with conditions response_time=fast, product_quality=low, support_experience=average, issue_resolved=yes, tone=negative, repeat_customer=no",
+          "exceptions": []
+        }
+      ]
+    },
+    {
+      "rule_id": "R6",
+      "conditions": {
+        "repeat_customer": "yes",
+        "issue_resolved": "yes",
+        "tone": "neutral"
+      },
+      "conclusion": "Satisfied",
+      "justification": "Loyal repeat customer whose issue was resolved, even with neutral tone, tends to be satisfied",
+      "exceptions": [
+        {
+          "rule_id": "R6.1",
+          "conditions": {
+            "repeat_customer": "yes",
+            "issue_resolved": "yes",
+            "tone": "neutral",
+            "response_time": "slow",
+            "product_quality": "low"
+          },
+          "conclusion": "Neutral",
+          "justification": "Slow response and low product quality undercut loyalty benefit for repeat customers",
+          "exceptions": []
+        },
+        {
+          "rule_id": "R6.2",
+          "conditions": {
+            "response_time": "medium",
+            "product_quality": "medium",
+            "support_experience": "average",
+            "issue_resolved": "yes",
+            "tone": "neutral",
+            "repeat_customer": "yes"
+          },
+          "conclusion": "Neutral",
+          "justification": "Exception added by incremental learning: correct label is 'Neutral' for record with conditions response_time=medium, product_quality=medium, support_experience=average, issue_resolved=yes, tone=neutral, repeat_customer=yes",
+          "exceptions": []
+        },
+        {
+          "rule_id": "R6.3",
+          "conditions": {
+            "response_time": "slow",
+            "product_quality": "high",
+            "support_experience": "good",
+            "issue_resolved": "yes",
+            "tone": "neutral",
+            "repeat_customer": "yes"
+          },
+          "conclusion": "Neutral",
+          "justification": "Exception added by incremental learning: correct label is 'Neutral' for record with conditions response_time=slow, product_quality=high, support_experience=good, issue_resolved=yes, tone=neutral, repeat_customer=yes",
+          "exceptions": []
+        },
+        {
+          "rule_id": "R6.4",
+          "conditions": {
+            "response_time": "medium",
+            "product_quality": "low",
+            "support_experience": "good",
+            "issue_resolved": "yes",
+            "tone": "neutral",
+            "repeat_customer": "yes"
+          },
+          "conclusion": "Neutral",
+          "justification": "Exception added by incremental learning: correct label is 'Neutral' for record with conditions response_time=medium, product_quality=low, support_experience=good, issue_resolved=yes, tone=neutral, repeat_customer=yes",
+          "exceptions": []
+        },
+        {
+          "rule_id": "R6.5",
+          "conditions": {
+            "response_time": "medium",
+            "product_quality": "medium",
+            "support_experience": "poor",
+            "issue_resolved": "yes",
+            "tone": "neutral",
+            "repeat_customer": "yes"
+          },
+          "conclusion": "Neutral",
+          "justification": "Exception added by incremental learning: correct label is 'Neutral' for record with conditions response_time=medium, product_quality=medium, support_experience=poor, issue_resolved=yes, tone=neutral, repeat_customer=yes",
+          "exceptions": []
+        }
+      ]
+    },
+    {
+      "rule_id": "R0.7",
+      "conditions": {
+        "response_time": "slow",
+        "product_quality": "low",
+        "support_experience": "average",
+        "issue_resolved": "no",
+        "tone": "neutral",
+        "repeat_customer": "no"
+      },
+      "conclusion": "Dissatisfied",
+      "justification": "Exception added by incremental learning: correct label is 'Dissatisfied' for record with conditions response_time=slow, product_quality=low, support_experience=average, issue_resolved=no, tone=neutral, repeat_customer=no",
+      "exceptions": []
+    }
+  ]
+}

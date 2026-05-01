@@ -1,0 +1,49 @@
+{
+    "rule": "Default",
+    "conclusion": "Maldives",
+    "cornerstone_idx": 5,
+    "exception": {
+        "rule": "Duration_Days > 6.0",
+        "conclusion": "Swiss Alps",
+        "cornerstone_idx": 0,
+        "exception": {
+            "rule": "Duration_Days > 8.5",
+            "conclusion": "Grand Canyon",
+            "cornerstone_idx": 4,
+            "exception": null,
+            "alternative": {
+                "rule": "Vibe == Culture",
+                "conclusion": "Vatican City",
+                "cornerstone_idx": 6,
+                "exception": null,
+                "alternative": null
+            }
+        },
+        "alternative": {
+            "rule": "Duration_Days <= 4.0",
+            "conclusion": "Bangkok",
+            "cornerstone_idx": 7,
+            "exception": {
+                "rule": "Vibe == Relax",
+                "conclusion": "Bali",
+                "cornerstone_idx": 9,
+                "exception": null,
+                "alternative": {
+                    "rule": "Budget == High",
+                    "conclusion": "Ibiza",
+                    "cornerstone_idx": 3,
+                    "exception": null,
+                    "alternative": null
+                }
+            },
+            "alternative": {
+                "rule": "Vibe == Culture",
+                "conclusion": "Kyoto",
+                "cornerstone_idx": 2,
+                "exception": null,
+                "alternative": null
+            }
+        }
+    },
+    "alternative": null
+}

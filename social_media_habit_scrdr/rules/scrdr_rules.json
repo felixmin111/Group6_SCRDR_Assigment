@@ -1,0 +1,48 @@
+{
+  "id": "R0",
+  "conditions": {},
+  "conclusion": "Moderate",
+  "justification": "Default rule: When no specific patterns are identified, social media usage is considered Moderate.",
+  "exception": {
+    "id": "R1",
+    "conditions": {
+      "daily_usage_hours": {"op": "<=", "value": 3.0},
+      "sleep_time": {"op": "in", "value": ["early", "normal"]},
+      "purpose": {"op": "in", "value": ["learning", "communication"]}
+    },
+    "conclusion": "Healthy",
+    "justification": "Low usage (<=3h/day), good sleep schedule, and purposeful usage (learning or communication) indicates a Healthy social media habit.",
+    "exception": {
+      "id": "R1a",
+      "conditions": {
+        "notification_check_frequency": {"op": "==", "value": "high"},
+        "primary_usage_type": {"op": "==", "value": "social"}
+      },
+      "conclusion": "Moderate",
+      "justification": "Exception: Even with low hours, high notification frequency combined with purely social usage indicates dependency signals — reclassified as Moderate.",
+      "exception": null
+    }
+  },
+  "sibling_rules": [
+    {
+      "id": "R2",
+      "conditions": {
+        "daily_usage_hours": {"op": ">", "value": 5.0},
+        "sleep_time": {"op": "==", "value": "late"},
+        "notification_check_frequency": {"op": "==", "value": "high"}
+      },
+      "conclusion": "Unhealthy",
+      "justification": "High usage (>5h), late-night sleep, and compulsive notification checking indicate disruptive social media behavior — classified as Unhealthy.",
+      "exception": {
+        "id": "R2a",
+        "conditions": {
+          "primary_usage_type": {"op": "==", "value": "study"},
+          "purpose": {"op": "==", "value": "learning"}
+        },
+        "conclusion": "Moderate",
+        "justification": "Exception: Heavy usage driven by academic study and learning reduces severity — reclassified as Moderate despite late sleep and high notifications.",
+        "exception": null
+      }
+    }
+  ]
+}
